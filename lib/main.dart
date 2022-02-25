@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:appli_music/welcome_page.dart';
 
+import 'l10n/l10n.dart';
+
 const d_red = const Color(0xFFE97170);
 
 void main() {
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
       ),
+      supportedLocales: L10n.all,
+      localizationsDelegates: [],
       debugShowCheckedModeBanner: false,
       home: WelcomePage(),
     );

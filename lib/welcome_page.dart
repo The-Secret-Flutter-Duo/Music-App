@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:appli_music/delayed_animation.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:appli_music/search_results.dart';
+import 'package:appli_music/search_results.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -8,13 +10,13 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFE8E9F3),
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.pinkAccent,
+          color: Color(0xFFE8E9F1),
           margin: const EdgeInsets.symmetric(
-            vertical: 80,
-            horizontal: 120,
+            vertical: 90,
+            horizontal: 40,
           ),
           child: Column(
             children: [
@@ -32,7 +34,7 @@ class WelcomePage extends StatelessWidget {
               DelayedAnimation(
                 delay: 2500,
                 child: Container(
-                  height: 200,
+                  height: 280,
                   margin: const EdgeInsets.only(
                     top: 70,
                     bottom: 0,
@@ -60,17 +62,27 @@ class WelcomePage extends StatelessWidget {
               DelayedAnimation(
                   delay: 4500,
                   child: Container(
-                    width: double.infinity,
-                    margin: const EdgeInsets.only(
-                      top: 70,
-                      bottom: 0,
-                    ),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(),
-                      child: Text('Get Started'),
-                      onPressed: () {},
-                    ),
-                  ))
+                      width: double.infinity,
+                      margin: const EdgeInsets.only(
+                        top: 70,
+                        bottom: 0,
+                      ),
+                      child: Container(
+                        color: Colors.blue,
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.red,
+                              //shape: (),
+                            ),
+                            child: Text('Get Started'),
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const SearchResultsPage()),
+                              );
+                            }),
+                      )))
             ],
           ),
         ),
