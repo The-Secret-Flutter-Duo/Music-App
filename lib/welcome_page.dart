@@ -25,7 +25,7 @@ class WelcomePage extends StatelessWidget {
                 child: Container(
                   height: 30,
                   margin: const EdgeInsets.only(
-                    top: 10,
+                    top: 20,
                     bottom: 0,
                   ),
                   child: const Text('Bienvenue sur Music App'),
@@ -45,7 +45,6 @@ class WelcomePage extends StatelessWidget {
               DelayedAnimation(
                   delay: 3500,
                   child: Container(
-                    color: Colors.blue,
                     height: 30,
                     width: 140,
                     margin: const EdgeInsets.only(
@@ -68,10 +67,10 @@ class WelcomePage extends StatelessWidget {
                         bottom: 0,
                       ),
                       child: Container(
-                        color: Colors.blue,
+                        color: Color(0xFFE8E9F1),
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.red,
+                              primary: Colors.pink,
                               //shape: (),
                             ),
                             child: Text('Get Started'),
